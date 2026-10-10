@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// ide-checkin v1.0.1
+// ide-checkin v1.0.2
 // Trae 签到统一携带 x-device-id (取登录态 icube-dc 设备键); 无设备头的 claim 会被服务端以 9004 参数错误拒绝
 'use strict';
 
@@ -870,7 +870,7 @@ async function cmdStatus() {
     label,
     ...results.map(r => (r && r[key] != null && r[key] !== '' ? String(r[key]) : '---')),
   ]);
-  console.log(renderTable(['字段', TRAE_APP, QODER_APP, WB_APP], rows));
+  console.log(renderTable(['', TRAE_APP, QODER_APP, WB_APP], rows));
   for (const [app, e] of failures) printFailure(app, e);
   process.exitCode = severity;
 }
