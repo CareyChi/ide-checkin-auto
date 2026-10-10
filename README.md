@@ -10,7 +10,7 @@
 
 </div>
 
-`ide-checkin.js` 是一个 Windows 本地小工具：直接读取三款 IDE 客户端在本机已登录的登录态，替你调用官方接口完成每日签到，并把结果汇总成一张清楚的小表格。单文件、零依赖、零配置。
+`ide-checkin.js` 是一个 Windows 本地小工具：直接读取三款 IDE 客户端在本机已登录的登录态，替你调用官方接口完成每日签到
 
 ## 特性
 
@@ -30,11 +30,6 @@
 | WorkBuddy | **保持运行**且已登录 |
 
 ## 快速开始
-
-```bash
-node ide-checkin.js checkin   # 一键三签
-node ide-checkin.js status    # 三合一看板
-```
 
 `checkin` 输出示例（数值为示例）：
 
@@ -99,14 +94,6 @@ node ide-checkin.js status    # 三合一看板
 
 </details>
 
-## 项目结构
-
-```text
-ide-checkin.js   # 全部逻辑：三平台签到 + 状态看板（本仓库仅收录整合版脚本）
-LICENSE          # Apache-2.0
-README.md
-```
-
 ## 常见问题
 
 **Q：会上传或打印我的 token 吗？**
@@ -116,7 +103,7 @@ README.md
 打开对应客户端确认已登录后重试。Trae / Qoder 读取的是本地存储文件，不必保持运行；WorkBuddy 的登录态经本地命名管道实时代理，必须保持运行。
 
 **Q：token 会过期吗？**
-会。`status` 看板会显示剩余有效期与到期时间；过期后打开对应客户端登录一次即可自动刷新。
+会。`status` 看板会显示剩余有效期与到期时间；过期后打开对应客户端登录一次即可自动刷新，脚本自身无需额外授权。
 
 **Q：支持多账号 / macOS / Linux 吗？**
 不支持，也暂无计划。本项目定位是 Windows 本机单账号自用自动化。
